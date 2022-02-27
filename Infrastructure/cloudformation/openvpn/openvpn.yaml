@@ -5,7 +5,7 @@ Parameters:
   NodeImageId:
     Description: The OpenVPN AMI Id
     Type: AWS::EC2::Image::Id
-    Default: ami-0461dc52a3f299bf7
+    Default: ami-0bb2699f6638760b5
 
   NodeVolumeSize:
     Description: The size of the hard drive of the machines (GBs)
@@ -15,7 +15,7 @@ Parameters:
   KeyName:
     Description: The EC2 Key Pair to allow SSH access to the instances
     Type: AWS::EC2::KeyPair::KeyName
-    Default: openvpn
+    Default: OpenVPN
 
   NodeInstanceType:
     Description: EC2 instance type for the node instances

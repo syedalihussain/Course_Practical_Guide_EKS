@@ -70,9 +70,7 @@
                 "ValidationMethod" : "DNS",
                 "DomainValidationOptions": [
                     {
-                        "DomainName": { "Ref": "DomainName" }
-                    },
-                    {
+                        "DomainName": { "Fn::Sub": "*.${DomainName}" },
                         "HostedZoneId": { "Ref": "HostedZoneId" }
                     }
                 ]

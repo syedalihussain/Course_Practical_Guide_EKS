@@ -24,6 +24,10 @@
                 "yes",
                 "no"
             ]
+        },
+        "HostedZoneId": {
+            "Description": "The Id of the hosted zone created in an earlier lesson",
+            "Type": "String"
         }
     },
     "Conditions": {
@@ -63,7 +67,15 @@
                         "Value": { "Ref": "DomainName" }
                     }
                 ],
-                "ValidationMethod" : "DNS"
+                "ValidationMethod" : "DNS",
+                "DomainValidationOptions": [
+                    {
+                        "DomainName": { "Ref": "DomainName" }
+                    },
+                    {
+                        "HostedZoneId": { "Ref": "HostedZoneId" }
+                    }
+                ]
             } 
         }
     }

@@ -1,0 +1,1 @@
+aws cloudformation create-stack --stack-name development-dns --template-body file://dns.json --parameters ParameterKey=Environment,ParameterValue=development ParameterKey=DomainName,ParameterValue=dev.practicalguidetoeks.com ParameterKey=HostedZoneId,ParameterValue=Z08370741QHTSUB8OYTB5
